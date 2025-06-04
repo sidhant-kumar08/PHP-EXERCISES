@@ -1,6 +1,8 @@
 <?php
     require_once("../src/helperFunctions.php");
 
+     session_start();
+
 
     $username = filter_input(INPUT_POST, 'username');
     $password = filter_input(INPUT_POST, 'password');

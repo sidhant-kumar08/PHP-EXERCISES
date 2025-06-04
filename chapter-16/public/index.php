@@ -29,9 +29,13 @@
     if($action == 'login'){
         displayLoginPage();
     } else if($action == 'products'){
-        displayProductsPage();
+        if(isset($_SESSION['user'])){
+            displayProductsPage();
+        } else {
+            header("Location: /public/index.php");
+        }
     } else if($action == 'logout'){
-        session_destroy();
+        unset($_SESSION['user']);
         header("Location: index.php");
     }
 ?>

@@ -1,8 +1,12 @@
 <?php
-    
-    print_r($_SESSION['user']);
+     session_start();
 
+     if($_SESSION['user']['role'] != 'admin'){
+        header("Location: /public/errorPage.php");
+     }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
