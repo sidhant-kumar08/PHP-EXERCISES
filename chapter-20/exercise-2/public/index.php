@@ -1,6 +1,6 @@
 <?php
 
-use Mattsmithdev\Product;
+    use Mattsmithdev\Product;
 
     require_once __DIR__ . '/../vendor/autoload.php';
 
